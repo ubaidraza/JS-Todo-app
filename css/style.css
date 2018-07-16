@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: #edf0f1;
+    padding: 80px 0 0 0;
+  }
+
+  .noFill{
+      fill:none;
+  }
+header {
+    width: 98.1%;
+    height:auto;
+  
+    position: fixed;
+    padding: 15px;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    z-index: 5;
+    
+  
+    background: #25b99a;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  header input {
+    width: 95%;
+    min-height: 50px;
+    float: left;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 25px 25px 5px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+header input::-webkit-input-placeholder{
+    color:rgb(255, 255,255,0.7);
+}
+
+header button{
+    width:50px;
+    height:50px;
+    background:white;
+    outline:none;
+    appearance: none;
+    box-shadow: none;
+    border-radius:25px;
+    position: absolute;
+    border:none;
+    right:20px;
+    cursor: pointer;
+
+
+}
+header button svg{
+    height: 18px;
+    width:18px;
+    
+}
+header button svg .fill{
+   fill:#25b99a;
+}
+
+div.container{
+    width:100%;
+    float:left;    
+}
+
+div.container ul.todo{
+  float:left;
+  width:100%;
+ 
+}
+
+div.container ul.todo li{
+    background-color:white;
+    border-radius:10px;
+    min-height: 50px;
+    width:88%;
+    float:left;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 4;
+    line-height: 50px;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0px 100px 0px 14px;
+    word-wrap: break-word;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+    position: relative;
+
+}
+div.container ul.todo li:last-of-type{
+    margin:0px;
+}
+
+div.container ul.todo li .buttons{
+    height: 50px;
+    width: 100px;
+    background: #fff;
+    float: left;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    border-radius: 10px;
+
+}
+
+div.container ul.todo li .buttons button{
+    height: 50px;
+    width:50px;
+    float: left;
+    border:0px;
+    outline:none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    background:none;
+    padding: 0px;
+    position: relative;
+    cursor: pointer;
+
+}
+ ul.todo li .buttons button:last-of-type:before{
+    content:'';
+    height: 30px;
+    width: 1px;
+    background:#edf0f1;
+
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+ ul.todo li .buttons button.remove svg{
+    height: 22px;
+    width:22px;
+    position: absolute;
+    top:14px;
+    bottom:14px;
+    left:14px;
+    right:14px;
+}
+
+ ul.todo li .buttons button.remove svg .fill{
+    fill:#c0cecb;
+}
+
+ ul.todo li .buttons button.remove:hover svg .fill{
+    fill:#ff4455;
+}
+
+ ul.todo li .buttons button.complete svg{
+    height: 22px;
+    width:22px;
+    position: absolute;
+    top:14px;
+    bottom:14px;
+    left:14px;
+    right:14px;
+    border:1.5px solid #25b99a;
+    border-radius:100%;
+}
+
+
+
+ul.todo:not(#complete) li .buttons button.complete svg rect{
+    fill:none;
+}
+
+ul.todo:not(#complete) li .buttons button.complete svg .fill{
+    fill:#25b99a;
+}
+
+ ul.todo:not(#complete) li .buttons button.complete:hover svg .fill{
+    fill:#fff;
+}
+
+ul.todo:not(#complete) li .buttons button.complete:hover svg rect {
+    fill: rgba(37, 185, 154, 0.75);
+}
+
+
+ul.todo#complete li .buttons button.complete svg .fill{
+    fill:white;
+}
+ul.todo#complete li .buttons button.complete:hover svg .fill{
+    fill:#25b99a;
+}
+
+ul.todo#complete li .buttons button.complete svg rect{
+    fill:rgba(37, 185, 154, 0.75);
+}
+
+ul.todo#complete li .buttons button.complete:hover svg rect{
+    fill:white;
+}
+ 
+ul.todo#complete{
+    position: relative;
+    padding-top: 60px
+}
+ul.todo#complete::before{
+    content:'';
+    height:1px;
+    width:300px;
+    background:#d8e5e0;
+    position: absolute;
+    top: 30%;
+    left: 48%;
+
+}
+
+
+
